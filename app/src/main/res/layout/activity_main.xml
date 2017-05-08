@@ -30,6 +30,7 @@
             android:textColor="#fff"/>
 
         <EditText
+            android:id="@+id/txtUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Masukkan username"
@@ -51,6 +52,7 @@
             android:textColor="#fff"/>
 
         <EditText
+            android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Masukkan password"
@@ -60,8 +62,10 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:text="LOGIN"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
 </LinearLayout>
