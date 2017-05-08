@@ -15,15 +15,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText txtUsername = (EditText) findViewById(R.id.txtUsername);
-        EditText txtPassword = (EditText) findViewById(R.id.txtPassword);
+        final EditText txtUsername = (EditText) findViewById(R.id.txtUsername);
+        final EditText txtPassword = (EditText) findViewById(R.id.txtPassword);
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("user", "Hello World!");
-                Toast.makeText(MainActivity.this, "Hello", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, txtUsername.getText() + " | " + txtPassword.getText(), Toast.LENGTH_SHORT).show();
             }
         });
     }
