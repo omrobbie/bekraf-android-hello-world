@@ -73,6 +73,6 @@
         android:layout_height="60dp"
         android:text="LOGIN"
         android:layout_marginTop="16dp"
-        android:layout_below="@id/vPassword"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>
