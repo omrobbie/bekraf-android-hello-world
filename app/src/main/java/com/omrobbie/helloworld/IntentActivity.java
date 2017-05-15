@@ -23,10 +23,9 @@ public class IntentActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final String userName = txtName.getText().toString();
 
-                Toast.makeText(IntentActivity.this, userName, Toast.LENGTH_SHORT).show();
-
                 // pindah ke layout yang lain dengan intent
                 Intent intent = new Intent(IntentActivity.this, IntentTargetActivity.class);
+                intent.putExtra("data", userName);
                 startActivity(intent);
             }
         });
