@@ -1,5 +1,6 @@
 package com.omrobbie.helloworld;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,10 @@ public class IntentActivity extends AppCompatActivity {
                 final String userName = txtName.getText().toString();
 
                 Toast.makeText(IntentActivity.this, userName, Toast.LENGTH_SHORT).show();
+
+                // pindah ke layout yang lain dengan intent
+                Intent intent = new Intent(IntentActivity.this, IntentTargetActivity.class);
+                startActivity(intent);
             }
         });
     }
