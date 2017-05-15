@@ -1,5 +1,6 @@
 package com.omrobbie.helloworld;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,7 +23,12 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, txtUsername.getText() + " | " + txtPassword.getText(), Toast.LENGTH_SHORT).show();
+                // sembunyikan fungsi Toast dan ganti dengan Intent
+                // Toast.makeText(MainActivity.this, txtUsername.getText() + " | " + txtPassword.getText(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(), RelativeLoginTarget.class);
+                intent.putExtra("data", txtUsername.getText().toString());
+                startActivity(intent);
             }
         });
     }
