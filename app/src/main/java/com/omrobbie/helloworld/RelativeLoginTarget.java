@@ -14,7 +14,10 @@ public class RelativeLoginTarget extends AppCompatActivity {
         TextView txtLoginName = (TextView) findViewById(R.id.txtLoginName);
 
         // get data intent dari layout login
-        String userName = getIntent().getStringExtra("data");
-        txtLoginName.setText(userName);
+        // String userName = getIntent().getStringExtra("data");
+        // txtLoginName.setText(userName);
+
+        // refactoring
+        txtLoginName.setText(getIntent().getStringExtra("data"));
     }
 }

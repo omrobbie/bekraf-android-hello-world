@@ -26,9 +26,13 @@ public class MainActivity extends AppCompatActivity {
                 // sembunyikan fungsi Toast dan ganti dengan Intent
                 // Toast.makeText(MainActivity.this, txtUsername.getText() + " | " + txtPassword.getText(), Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getApplicationContext(), RelativeLoginTarget.class);
-                intent.putExtra("data", txtUsername.getText().toString());
-                startActivity(intent);
+                // tampilkan hasil ke layout tujuan
+                // Intent intent = new Intent(getApplicationContext(), RelativeLoginTarget.class);
+                // intent.putExtra("data", txtUsername.getText().toString());
+                // startActivity(intent);
+
+                // refactoring
+                startActivity(new Intent(getApplicationContext(), RelativeLoginTarget.class).putExtra("data", txtUsername.getText().toString()));
             }
         });
     }
