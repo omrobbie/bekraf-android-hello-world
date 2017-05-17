@@ -14,4 +14,13 @@
         android:text="Hello World!"
         android:textSize="30sp"
         android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Logout"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtIntentTarget"/>
 </RelativeLayout>
