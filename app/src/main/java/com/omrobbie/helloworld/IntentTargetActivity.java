@@ -41,8 +41,7 @@ public class IntentTargetActivity extends AppCompatActivity {
 
                 finish();
 
-
-
+                // tampilkan layout dari class IntentActivity
                 Intent intent = new Intent(getApplicationContext(), IntentActivity.class);
                 startActivity(intent);
             }
