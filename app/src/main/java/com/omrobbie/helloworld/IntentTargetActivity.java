@@ -29,9 +29,19 @@ public class IntentTargetActivity extends AppCompatActivity {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pref = getBaseContext().getSharedPreferences("userprefs", MODE_PRIVATE);
-                pref.edit().putString("username", null).commit();
+                // pref = getBaseContext().getSharedPreferences("userprefs", MODE_PRIVATE);
+                // pref.edit().putString("username", null).commit();
+
+                // menggunakan editor untuk menyimpan data sharedpreferences
+                SharedPreferences.Editor editor = getSharedPreferences("username", MODE_PRIVATE).edit();
+                editor.putString("username", null);
+                editor.putString("a", null);
+                editor.putString("b", null);
+                editor.commit();
+
                 finish();
+
+
 
                 Intent intent = new Intent(getApplicationContext(), IntentActivity.class);
                 startActivity(intent);
