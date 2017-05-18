@@ -72,4 +72,9 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
+
+    // dapatkan data per klik
+    public String getItem(int id) {
+        return mData.get(id);
+    }
 }
