@@ -1,7 +1,6 @@
 package com.omrobbie.helloworld;
 
 import android.content.Context;
-import android.support.v4.widget.TextViewCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,14 +23,13 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
         public ViewHolder(View view) {
             super(view);
-            textView = (TextView) view.findViewById(R.id.rvList);
+            textView = (TextView) view.findViewById(R.id.txtAnimalName);
             view.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
             if(mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
-
         }
     }
 
