@@ -11,6 +11,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class API_Activity extends AppCompatActivity {
 
     @Override
@@ -22,7 +26,7 @@ public class API_Activity extends AppCompatActivity {
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="http://www.google.com";
+        String url ="http://jsonplaceholder.typicode.com/posts";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -30,7 +34,17 @@ public class API_Activity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
-                        mTextView.setText("Response is: "+ response.substring(0,500));
+                        // mTextView.setText("Response is: "+ response.substring(0,500));
+
+                        // get data JSON dari Internet, dan tampilkan ke TextView
+                        try {
+                            JSONArray result = new JSONArray(response);
+                            JSONObject data = (JSONObject)result.get(0);
+                            String title = data.getString("title");
+                            mTextView.setText(title);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }, new Response.ErrorListener() {
             @Override
