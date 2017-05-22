@@ -15,6 +15,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class API_Activity extends AppCompatActivity {
 
     @Override
@@ -42,6 +45,18 @@ public class API_Activity extends AppCompatActivity {
                             JSONObject data = (JSONObject)result.get(0);
                             String title = data.getString("title");
                             mTextView.setText(title);
+
+                            // Deklarasi array
+                            ArrayList<HashMap<String, String>> myArray = new ArrayList<>();
+
+                            // Konversi ke array
+                            for (int i=0; i<result.length(); i++) {
+                                JSONObject item = (JSONObject)result.get(i);
+                                HashMap<String, String> temp = new HashMap<>();
+                                temp.put("title", item.get("title").toString());
+                                temp.put("body", item.get("body").toString());
+                                myArray.add(temp);
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
