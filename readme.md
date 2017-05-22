@@ -8,3 +8,6 @@ Acara ini merupakan bagian dari [Bekraf Digital Talent 2017](https://www.kumpul.
 * [Android Studio](http://developer.android.com/sdk/index.html "Download Android Studio")
 * [Java Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/index.html "Download JDK")
 * [JSONPlaceholder (Fake Online REST API for Testing and Prototyping)](http://jsonplaceholder.typicode.com/ "Fake Online REST API for Testing and Prototyping")
+
+### Contoh online :
+* [API - Sending a Simple Request](https://developer.android.com/training/volley/simple.html "Contoh menggunakan newRequestQueue")
