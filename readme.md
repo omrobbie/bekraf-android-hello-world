@@ -10,4 +10,5 @@ Acara ini merupakan bagian dari [Bekraf Digital Talent 2017](https://www.kumpul.
 * [JSONPlaceholder (Fake Online REST API for Testing and Prototyping)](http://jsonplaceholder.typicode.com/ "Fake Online REST API for Testing and Prototyping")
 
 ### Contoh online :
+* [Layout - RecyclerView](http://stackoverflow.com/questions/40584424/simple-android-recyclerview-example "Contoh menggunakan RecyclerView")
 * [API - Sending a Simple Request](https://developer.android.com/training/volley/simple.html "Contoh menggunakan newRequestQueue")
