@@ -7,29 +7,10 @@
     tools:context="com.omrobbie.helloworld.MovieActivity"
     android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/movieImg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@color/colorAccent"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMovie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/movieTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:text="Title"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_toRightOf="@id/movieImg"/>
-
-    <TextView
-        android:id="@+id/movieDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Description"
-        android:layout_toRightOf="@id/movieImg"
-        android:layout_below="@id/movieTitle"/>
+    </android.support.v7.widget.RecyclerView>
 </RelativeLayout>
