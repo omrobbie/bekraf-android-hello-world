@@ -20,8 +20,9 @@
             android:name=".RelativeLoginTarget"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".ListviewActivity" />
-        <activity android:name=".RecyclerviewActivity"/>
-        <activity android:name=".API_Activity">
+        <activity android:name=".RecyclerviewActivity" />
+        <activity android:name=".API_Activity" />
+        <activity android:name=".MovieActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
