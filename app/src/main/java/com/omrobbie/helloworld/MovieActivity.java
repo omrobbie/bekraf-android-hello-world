@@ -1,5 +1,6 @@
 package com.omrobbie.helloworld;
 
+import android.content.Intent;
 import android.graphics.Movie;
 import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
@@ -97,6 +98,13 @@ public class MovieActivity extends AppCompatActivity implements MovieAdapter.Ite
 
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
+        // Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
+        HashMap<String, String> item = adapter.getItem(position);
+
+        Intent intent = new Intent(MovieActivity.this, MovieIntent.class);
+        intent.putExtra("title", item.get("title"));
+        intent.putExtra("overview", item.get("overview"));
+        intent.putExtra("poster_path", item.get("poster_path"));
+        startActivity(intent);
     }
 }

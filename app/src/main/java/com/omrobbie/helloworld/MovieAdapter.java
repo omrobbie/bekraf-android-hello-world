@@ -87,8 +87,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     }
 
     // dapatkan data per klik
-    public String getItem(int id) {
+    public HashMap<String,String> getItem(int id) {
         HashMap<String,String> item = mData.get(id);
-        return item.get("title");
+        return item;
     }
 }
