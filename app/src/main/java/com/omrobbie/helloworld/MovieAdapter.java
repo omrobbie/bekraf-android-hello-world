@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -18,6 +20,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     private ArrayList<HashMap<String, String>> mData = new ArrayList<>();
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
+    private Context context;
 
     /* FUNGSI DIBAWAH INI WAJIB ADA !! -----------------------------------------------------------*/
     // tempat semua data list disimpan
@@ -54,6 +57,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         HashMap<String, String> item = mData.get(position);
         holder.movieTitle.setText(item.get("title"));
         holder.movieDescription.setText(item.get("overview"));
+        Glide.with(context)
+                .load("https://image.tmdb.org/t/p/w500" + item.get("poster_path"))
+                .into(holder.movieImg);
     }
 
     // dapatkan jumlah total data
@@ -77,6 +83,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     public MovieAdapter(Context context, ArrayList<HashMap<String, String>> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
+        this.context = context;
     }
 
     // dapatkan data per klik
