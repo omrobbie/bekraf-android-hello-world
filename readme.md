@@ -13,6 +13,9 @@ Acara ini merupakan bagian dari [Bekraf Digital Talent 2017](https://www.kumpul.
 * [Layout - RecyclerView](http://stackoverflow.com/questions/40584424/simple-android-recyclerview-example "Contoh menggunakan RecyclerView")
 * [API - Sending a Simple Request](https://developer.android.com/training/volley/simple.html "Contoh menggunakan newRequestQueue")
 
-#### Data API :
+### Data API :
 * [JSONPlaceholder (Fake Online REST API for Testing and Prototyping)](http://jsonplaceholder.typicode.com/ "Fake Online REST API for Testing and Prototyping")* [api.themoviedb.org](https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=9c04c6a25d15c5a8a20e1c0a16133557 "Data API themoviedb")
 * [Image link path for themoviedb API](https://image.tmdb.org/t/p/w500 "Copy-paste link ini")
+
+### Tools :
+* [JSON Formatter](https://jsonformatter.curiousconcept.com/ "Tools untuk memperbaiki format JSON agar mudah dibaca")
